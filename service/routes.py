@@ -81,6 +81,8 @@ def list_accounts():
 
 # ... place you code here to READ an account ...
 @app.route("/accounts/<int:account_id>", methods=["GET"])
+
+
 def get_accounts(account_id):
     """
     Reads an Account
