@@ -1,0 +1,18 @@
+(venv) theia:devops-capstone-project$ oc get all -l app=accounts
+Warning: apps.openshift.io/v1 DeploymentConfig is deprecated in v4.14+, unavailable in v4.10000+
+NAME                            READY   STATUS             RESTARTS   AGE
+pod/accounts-84c689bd9c-6dkph   0/1     ImagePullBackOff   0          51m
+pod/accounts-84c689bd9c-bz7ft   0/1     ImagePullBackOff   0          51m
+pod/accounts-84c689bd9c-swlbh   0/1     ImagePullBackOff   0          51m
+
+NAME               TYPE        CLUSTER-IP     EXTERNAL-IP   PORT(S)    AGE
+service/accounts   ClusterIP   172.21.11.82   <none>        8080/TCP   50m
+
+NAME                       READY   UP-TO-DATE   AVAILABLE   AGE
+deployment.apps/accounts   0/3     3            0           51m
+
+NAME                                  DESIRED   CURRENT   READY   AGE
+replicaset.apps/accounts-84c689bd9c   3         3         0       51m
+
+NAME                                HOST/PORT                                                                                                                        PATH   SERVICES   PORT    TERMINATION   WILDCARD
+route.route.openshift.io/accounts   accounts-sn-labs-sajidpalagir.labs-prod-openshift-san-a45631dc5778dc6371c67d206ba9ae5c-0000.us-east.containers.appdomain.cloud          accounts   <all>   edge          None
